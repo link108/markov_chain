@@ -60,7 +60,5 @@ def chunks(l, n):
 markovChain = MarkovChain(percision=2)
 for filename in os.listdir("data"):
     markovChain.add_to_model_from_file("data/" + filename)
-# markovChain.add_to_model_from_file("data/carl_sagan_demon_haunted_world.txt")
-# markovChain.add_to_model_from_file("data/carl_sagan_the_cosmic_connection.txt")
 markovChain.create_chain_from_model()
 markovChain.generate_text_from_chain(100)
